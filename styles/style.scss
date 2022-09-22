@@ -1,0 +1,105 @@
+//color
+$cyan: hsl(193, 38%, 86%);
+$green: hsl(150, 100%, 66%);
+$gray-blue: hsl(217, 19%, 38%); 
+$dark-grey-blue: hsl(217, 19%, 24%);
+$dark-blue: hsl(218, 23%, 16%); 
+
+//font size 
+$quote-size: 24px; 
+$heading-size: 13px; 
+
+//font style 
+$manrope: 'Manrope', sans-serif;
+
+//breakpoint 
+$breakpoint-tablet: 768px;
+
+
+
+body { 
+    height: 98vh;
+    background-color: $dark-blue;
+    font-family: $manrope;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box {
+    background-color: $dark-grey-blue;
+    max-width: 343px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1.5em;
+    position: relative;
+    box-sizing: border-box;
+}
+
+span { 
+    padding-top: 2.5em;
+    font-size: $heading-size;
+    color: $green;
+    letter-spacing: 3.46px;
+}
+
+p {
+    font-size: $quote-size;
+    color: $cyan;
+    text-align: center;
+}
+
+.divider-mobile {
+    padding-bottom: 3.75em;
+}
+
+.divider-desktop {
+    padding-bottom: 4.3em;
+    display: none;
+}
+
+button {
+    background-color: $green;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    bottom: -2rem;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 0 40px 0 $green;
+    }
+}
+
+
+.attribution {
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $cyan;
+}
+
+
+@media (min-width: $breakpoint-tablet) {
+    .divider-mobile {
+        display: none;
+    }
+    .divider-desktop {
+        display: block;
+    }
+
+    .box {
+        max-width: 540px;
+        padding: 0 3.125em;
+    }
+    span { 
+        padding-top: 3.125em;
+    }
+    p {
+        margin-bottom: 1.6em;
+    }
+}
